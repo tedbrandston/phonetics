@@ -1,0 +1,23 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<body>
+
+<h3>Input</h3>
+<p>A .csv file with two columns: target and rendition. You can export this from a google doc via File->Download as->Comma-Separated Values</p>
+<h3>Output</h3>
+<p>#. &lt;target&gt;<br/>[&lt;rendition&gt;]<br/><br/>For each line in the input.</p>
+
+<input type="file" id="input"></input>
+<br/>
+<br/>
+<output id="output" for="input">Output will appear here...</output>
+
+<script src="utils.js"></script>
+<script src="speech_sample_formatting.js"></script>
+<script>
+// from utils
+document.onload = supportsFileAPIs();
+</script>
+</body>
+</html>
