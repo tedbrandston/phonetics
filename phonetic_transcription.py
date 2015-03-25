@@ -18,6 +18,9 @@ def main(input, output):
     with open(input, 'r') as infile:
         lines = infile.read().split('\n')
 
+    # strip blank lines
+    lines = [line for line in lines if line != '']
+
     pairs = []
     for i in range(len(lines)/2):
         pairs.append((lines[i*2], lines[i*2+1]))
