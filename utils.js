@@ -9,3 +9,17 @@ function supportsFileAPIs() {
     alert('The File APIs are not fully supported in this browser.');
   }
 }
+
+function loadFileAndCall(processCallback) {
+  function loadFile() {
+    var file = this.files[0];
+
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      processCallback(e.target.result);
+    };
+
+    reader.readAsText(file);
+  }
+  return loadFile;
+}

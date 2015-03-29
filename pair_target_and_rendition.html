@@ -1,0 +1,24 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<body>
+
+<h3>Input</h3>
+<p>A .csv file with two columns: target and rendition. You can export this from a google doc via File->Download as->Comma-Separated Values</p>
+<p>The number of words (space-separated runs of letters) must match between the target and the rendition. If any mismatches are found they will be printed instead of the output.
+<h3>Output</h3>
+<p>If errors are encountered processing the input, those will be printed. Otherwise an alphabetized list of &lt;target word&gt;, &lt;source line number&gt;, &lt;rendition&gt; for each word in the input targets.</p>
+
+<input type="file" id="input"></input>
+<br/>
+<br/>
+<output id="output" for="input">Output will appear here...</output>
+
+<script src="utils.js"></script>
+<script src="pair_target_and_rendition.js"></script>
+<script>
+// from utils
+document.onload = supportsFileAPIs();
+</script>
+</body>
+</html>

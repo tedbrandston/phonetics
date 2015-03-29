@@ -1,16 +1,5 @@
 ﻿"use strict";
 
-function loadFile() {
-  var file = this.files[0];
-
-  var reader = new FileReader();
-  reader.onload = function(e) {
-    processInput(e.target.result);
-  };
-
-  reader.readAsText(file);
-}
-
 function processInput(data) {
   var rows = data.split('\n');
   var output = '';
@@ -26,4 +15,4 @@ function processInput(data) {
   document.getElementById('output').innerHTML = output;
 }
 
-document.getElementById('input').addEventListener('change', loadFile);
+document.getElementById('input').addEventListener('change', loadFileAndCall(processInput));
