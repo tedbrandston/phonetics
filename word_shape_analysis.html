@@ -1,0 +1,28 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<body>
+
+<h3>Input</h3>
+<p>A .csv file with five columns: target word in english, rendition in IPA, rendition word shape, target in IPA, target word shape.</p>
+<h3>Output</h3>
+<p></p>
+
+<input type="file" id="input"></input>
+<br/>
+<br/>
+<input type="radio" id="sort_t" name="sort" value="target">Sort by target word shape</input>
+<input type="radio" id="sort_r" name="sort" value="rendition">Sort by rendition word shape</input>
+<br/>
+<br/>
+<output id="output" for="input">Output will appear here...</output>
+
+<script src="utils.js"></script>
+<script src="PapaParse/papaparse.js"></script>
+<script src="word_shape_analysis.js"></script>
+<script>
+// from utils
+document.onload = supportsFileAPIs();
+</script>
+</body>
+</html>

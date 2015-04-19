@@ -1,0 +1,3 @@
+[submodule "PapaParse"]
+	path = PapaParse
+	url = git@github.com:mholt/PapaParse.git
